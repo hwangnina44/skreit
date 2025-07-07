@@ -1,7 +1,8 @@
 ///index.js
 
 $(function () {
-    ////////bar active/////////////
+
+    //메뉴 active////////////////////////////////////////////////////////////////
 
     function headerActive() {
         $("header").addClass('active');
@@ -15,11 +16,10 @@ $(function () {
     }
 
 
-
     $(window).scroll(function () {
 
         var scrollTop = $(window).scrollTop();
-        console.log(scrollTop);
+
         if (scrollTop > 250) {
             headerActive();
         } else {
@@ -36,9 +36,7 @@ $(function () {
         }
     );
 
-
-
-
+    //메뉴 텝설정////////////////////////////////////////////////////////////
     $('.menu >li ').hover(
         function () {
 
@@ -51,6 +49,84 @@ $(function () {
         }
     );
 
+    //포트폴리오 배경/////////////////////////////////////////////////////////
+    $('.portfolio .content-right .con1').hover(
+        function () {
+            $('.bg').css({
+                background: "url(../image/pf_bg1.jpg) center/cover fixed"
+            },800);
+        },
+        function () {
+            bg();
+        }
+    );
+
+    $('.portfolio .content-right .con2').hover(
+        function () {
+            $('.bg').css({
+                background: "url(../image/pf_bg2.jpg) center/cover fixed"
+            });
+        },
+        function () {
+            bg();
+        }
+    );
+    $('.portfolio .content-right .con3').hover(
+        function () {
+            $('.bg').css({
+                background: "url(../image/pf_bg3.jpg) center/cover fixed"
+            });
+        },
+        function () {
+            bg();
+        }
+    );
+    $('.portfolio .content-right .con4').hover(
+        function () {
+            $('.bg').css({
+                background: "url(../image/pf_bg4.jpg) center/cover fixed"
+            });
+        },
+        function () {
+            bg();
+        }
+    );
+    $('.portfolio .content-right .con5').hover(
+        function () {
+            $('.bg').css({
+                background: "url(../image/pf_bg5.jpg) center/cover fixed"
+            });
+        },
+        function () {
+            bg();
+        }
+    );
+    $('.portfolio .content-right .con6').hover(
+        function () {
+            $('.bg').css({
+                background: "url(../image/pf_bg6.jpg) center/cover fixed"
+            });
+        },
+        function () {
+            bg();
+        }
+    );
+
+    function bg() {
+        $('.bg').css({
+            position: "absolute",
+            left: 0,
+            top: 0,
+            zIndex: "-1",
+            width: "100%",
+            height: "100%",
+            background: "url(../image/asset_bg.jpg) center/cover fixed"
+
+        });
+    }
+
+
+    //스와이퍼 /////////////////////////////////////////////////////////
     var swiper = new Swiper(".mySwiper", {
 
         on: {
@@ -69,7 +145,7 @@ $(function () {
         loop: true,
         centeredSlides: true, //슬라이드 가운데 정렬
         slidesPerView: "auto", // 한 번에 보여질 슬라이드 개수 
-        spaceBetween: 40,   // 슬라이드 간 간격
+        spaceBetween: 20,   // 슬라이드 간 간격
 
         pagination: {
             el: ".mySwiper .bar",

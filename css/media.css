@@ -142,7 +142,6 @@
 
     }
 
-
     article.portfolio-tablet .title {
         padding: 40px 20px;
         color: #fff;
@@ -178,7 +177,7 @@
         overflow: hidden;
         margin: 80px 0;
     }
-
+    /* 슬라이드 엑티브시 효과 추가  */
     .content-des .mySwiper .content-box.on {
         transform: translateY(-20px);
         transition: 0.3s;
@@ -190,13 +189,12 @@
         display: flex;
         flex-direction: column;
         color: #fff;
-        position: relative;
-        /* 더보가 아이콘 기준 */
-
+        position: relative; /* 더보가 아이콘 기준 */
         padding: 28px 20px;
         box-sizing: border-box;
     }
 
+    /* 페이지 네이션 위치 및 색상변경 */
     .portfolio-tablet .content-des .swiper-pagination.bar {
         background: rgba(255, 255, 255, 0.3);
         display: block;
@@ -207,7 +205,7 @@
         top: 95%;
      
     }
-
+    /* 페이지 네이션 색상 변경 */
     :root {
         --swiper-theme-color: #cccc;
     }
@@ -226,3 +224,4 @@
         transform: translateX(-50%);
     }
 }
+

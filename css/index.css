@@ -239,7 +239,7 @@ article.banner p {
     position: absolute;
     left: 50%;
     bottom: 20%;
-   transform: translateX(-50%) rotate(-90deg);
+    transform: translateX(-50%) rotate(-90deg);
 }
 
 article.banner p span::before {
@@ -251,7 +251,7 @@ article.banner p span::before {
     transform: translateX(-24px);
     opacity: 0.25;
     animation: more 1s ease 0.2s infinite;
-    
+
 }
 
 article.banner p span {
@@ -261,7 +261,7 @@ article.banner p span {
     background: url(../image/arr_down.svg) no-repeat center /contain;
     opacity: 1;
     animation: more 1s ease infinite;
-    
+
 }
 
 article.banner p span::after {
@@ -273,8 +273,8 @@ article.banner p span::after {
     transform: translate(-12px, -12px);
     opacity: 0.5;
     animation: more 1s ease 0.8s infinite;
-    
-   
+
+
 }
 
 /**********************section 리츠 ******************************8*/
@@ -392,6 +392,7 @@ article.portfolio .bg {
     background: url(../image/asset_bg.jpg) center /cover fixed;
 }
 
+
 article.portfolio .inner {
     display: flex;
     flex-direction: row;
@@ -437,8 +438,6 @@ article.portfolio .inner {
     padding: 48px 40px;
     box-sizing: border-box;
     border-radius: 16px;
-    outline: 1px solid red;
-
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -499,7 +498,7 @@ article.portfolio .inner {
     margin-left: 420px;
 }
 
-.con a:hover {
+.con:hover a {
     border: 1px solid #CE0E2D;
     background-color: #CE0E2D;
 }
@@ -507,6 +506,74 @@ article.portfolio .inner {
 article.portfolio-tablet {
     display: none;
 }
+
+
+
+
+
+article.feature {
+    width: 100%;
+}
+
+article.feature nav {
+    width: 100%;
+
+    background-color: #555;
+}
+
+article.feature nav ul {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+article.feature nav ul li {
+    width: 200px;
+    line-height: 100px;
+    text-align: center;
+}
+
+article.feature nav ul li.on::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #CE0E2D;
+}
+
+article.feature nav ul li a {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+article.feature #growth {
+    display: flex;
+    flex-direction: row;
+}
+
+article.feature #growth .growth-media {
+    width: 50%;
+    background-color: #555;
+}
+
+#growth .growth-media .title {
+    color: #fff;
+}
+
+#growth .growth-media .title h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+#growth .growth-media .title p {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
 
 @keyframes move {
     0% {
@@ -541,5 +608,17 @@ article.portfolio-tablet {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes pf_bg_motion {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
