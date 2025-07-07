@@ -508,21 +508,26 @@ article.portfolio-tablet {
 }
 
 
-
-
-
 article.feature {
     width: 100%;
+    background: url(../image/feature_sec1_bg.jpg) no-repeat center /cover;
+
+    position: relative;
+    /* nav에 기준 */
 }
 
 article.feature nav {
     width: 100%;
+    border-bottom: 1px solid #666;
 
-    background-color: #555;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 5;
 }
 
 article.feature nav ul {
-    height: 100px;
+    height: 88px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -532,8 +537,14 @@ article.feature nav ul {
 
 article.feature nav ul li {
     width: 200px;
-    line-height: 100px;
+    line-height: 88px;
     text-align: center;
+}
+
+article.feature nav ul li a {
+    color: #EE7623;
+    font-size: 1.125rem;
+    font-weight: 800;
 }
 
 article.feature nav ul li.on::after {
@@ -541,7 +552,7 @@ article.feature nav ul li.on::after {
     display: block;
     width: 100%;
     height: 4px;
-    background-color: #CE0E2D;
+    background-color: #EE7623;
 }
 
 article.feature nav ul li a {
@@ -550,17 +561,26 @@ article.feature nav ul li a {
 }
 
 article.feature #growth {
+    width: 100%;
+    padding-bottom: 120px;
+    position: relative;
+    /* 스와이퍼 기준 */
+    overflow: hidden;
+}
+
+/*  */
+article.feature #growth .inner {
     display: flex;
     flex-direction: row;
 }
 
 article.feature #growth .growth-media {
     width: 50%;
-    background-color: #555;
 }
 
 #growth .growth-media .title {
     color: #fff;
+    margin: 80px 0 60px;
 }
 
 #growth .growth-media .title h2 {
@@ -574,6 +594,149 @@ article.feature #growth .growth-media {
     font-weight: 800;
 }
 
+#growth .growth-des {
+    width: 50%;
+    /*.star 기준 */
+}
+
+.growth-des .swiper {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.growth-des .swiper-slide {
+    display: flex;
+}
+
+.growth-des .mySwiper2 .swiper-slide {
+    background-color: #fff;
+    border-radius: 16px;
+    width: 300px;
+    height: 400px;
+    padding: 48px 40px;
+    box-sizing: border-box;
+    margin-top: 80px;
+}
+
+.mySwiper2 .swiper-slide .growth-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-slide .growth-txt .top-txt h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #000;
+}
+
+.swiper-slide .top-txt h3 span {
+    font-size: 3rem;
+}
+
+.swiper-slide .top-txt p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.mySwiper2>p {
+    color: #fff;
+    height: 14000px;
+    position: relative;
+    z-index: 789;
+}
+
+/* 글로벌 인덱스 */
+.swiper-slide .txt4 .top-txt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-slide .txt4 .top-txt h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.swiper-slide .txt4 .top-txt p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.swiper-slide .txt4 .top-txt p span {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 3px;
+}
+
+.mySwiper2 .swiper-slide .bottom-txt {
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.mySwiper2 .swiper-slide .bottom-txt .icon-box {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    right: 40px;
+    bottom: 48px;
+}
+
+.swiper-slide .txt1 .icon-box {
+    background: url(../image/ic_growth1.png) no-repeat left/ auto 64px;
+}
+
+.swiper-slide-active .txt1 .icon-box {
+    background: url(../image/ic_growth1.png) no-repeat 100%/ auto 64px;
+}
+
+.swiper-slide .txt2 .icon-box {
+    background: url(../image/ic_growth2.png) no-repeat left/ auto 64px;
+}
+
+.swiper-slide-active .txt2 .icon-box {
+    background: url(../image/ic_growth2.png) no-repeat 100%/ auto 64px;
+}
+
+.swiper-slide .txt3 .icon-box {
+    background: url(../image/ic_growth3.png) no-repeat left/ auto 64px;
+}
+
+.swiper-slide-active .txt3 .icon-box {
+    background: url(../image/ic_growth3.png) no-repeat 100%/ auto 64px;
+}
+
+.growth-des .swiper-pagination {
+    position: absolute;
+    left: 0%;
+    top: 90%;
+    width: 100%;
+}
+
+.growth-des .mySwiper2 .swiper-slide-active {
+    transform: translateY(-20px);
+    background-color: #EE7623;
+}
+
+.growth-des .mySwiper2 .swiper-slide-active h3,
+.growth-des .mySwiper2 .swiper-slide-active p,
+.growth-des .mySwiper2 .swiper-slide-active p span {
+    color: #fff;
+}
+
+#growth .inner .growth-des .star {
+    position: absolute;
+    right: 43%;
+    bottom: 16%;
+    color: #fff;
+}
 
 @keyframes move {
     0% {

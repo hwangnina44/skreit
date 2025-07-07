@@ -54,7 +54,7 @@ $(function () {
         function () {
             $('.bg').css({
                 background: "url(../image/pf_bg1.jpg) center/cover fixed"
-            },800);
+            }, 800);
         },
         function () {
             bg();
@@ -167,5 +167,17 @@ $(function () {
             border: "1px solid #fff"
         });
     }
+
+    //스와이퍼 성장성/////////////////////////////////////////////////
+    var swiper = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        autoplay: { delay: 3000 },
+    });
 
 });
