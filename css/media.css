@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+@media all and (max-width:1700px) {
+    header h1.logo {
+        margin-left: 30px;
+    }
+
+    nav .menu>li {
+        padding: 0 40px;
+    }
+}
+
+@media all and (max-width:1400px) {
+    header h1.logo {
+        margin-left: 30px;
+    }
+
+    nav .menu>li {
+        padding: 0 20px;
+    }
+
+    article.banner p {
+        display: none;
+    }
+}
+
+@media all and (max-width:1100px) {
+    header {
+        height: 68px;
+    }
+
+    header h1.logo {
+        margin-left: 20px;
+    }
+
+    div.wrap {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    article.banner h2 {
+        font-size: 3rem;
+
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%);
+    }
+
+    article.banner h2 br {
+        display: block;
+    }
+
+
+    article.skreit {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    article.skreit .title {
+        width: 100%;
+        height: 100%;
+    }
+
+    article.skreit .title .title-des {
+        margin-left: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    article.skreit .title h2 {
+        font-size: 2rem;
+        font-weight: 900;
+
+        margin-bottom: 40px;
+    }
+
+    article.skreit .title p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    article.skreit .des-box {
+        width: 100%;
+        height: 100%;
+        padding: 80px 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+
+
+        background-color: #000;
+        color: #fff;
+    }
+
+    article.skreit .des-box .des {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skreit .des-box .des .img-box {
+        height: 48px;
+    }
+
+    .skreit .des-box .des .des-left p {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .skreit .des-box .des .des-left p span {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    article.skreit .des-box .des .des-right {
+        font-size: 2rem;
+    }
+
+    /****************포트폴리오 테블릿**************************/
+    article.portfolio {
+        display: none;
+    }
+
+    article.portfolio-tablet {
+        display: block;
+        padding: 80px 0;
+        width: 100%;
+        height: 100%;
+        background: url(../image/asset_bg.jpg) center /cover;
+        box-sizing: border-box;
+        outline: 5px solid red;
+    }
+
+
+    article.portfolio-tablet .title {
+        padding: 40px 20px;
+        color: #fff;
+
+    }
+
+    article.portfolio-tablet .title h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 26px;
+    }
+
+    article.portfolio-tablet .title p {
+        font-size: 0.875rem;
+    }
+
+    .portfolio-tablet .content-des {
+        width: 100%;
+        height: 100%
+    }
+
+    .portfolio-tablet .content-des .mySwiper {
+        overflow: visible;
+        display: flex;
+    }
+
+    .content-des .mySwiper .content-box {
+
+        display: flex;
+        justify-content: center;
+        width: 280px !important;
+        height: 346px;
+        box-sizing: border-box;
+        border-radius: 16px;
+
+        overflow: hidden;
+        margin-bottom: 80px;
+    }
+
+    .content-des .mySwiper .con {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        position: relative;
+        /* 더보가 아이콘 기준 */
+
+        padding: 28px 20px;
+        box-sizing: border-box;
+    }
+
+    .swiper-slide.on {
+        transform: translateY(-50px);
+        transition: 0.3s;
+    }
+
+    .portfolio-tablet .content-des .swiper-pagination.bar {
+        background: rgba(255, 255, 255, 0.3);
+        display: block;
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+    }
+
+    :root {
+        --swiper-theme-color: #cccc;
+    }
+
+}
+
+@media all and (max-width: 768px) {
+    article.banner h2 {
+        width: 300px;
+        font-size: 2.5rem;
+        text-align: center;
+
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%);
+    }
+}
