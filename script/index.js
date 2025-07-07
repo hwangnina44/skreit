@@ -52,20 +52,25 @@ $(function () {
     );
 
     var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        centeredSlides: true, //슬라이드 가운데 정렬
 
-        slidesPerView: 2.5, // 한 번에 보여질 슬라이드 개수 
-        spaceBetween: 50,   // 슬라이드 간 간격
         on: {
             init: function () {
-                $('.swiper-slide').eq(this.realIndex).addClass('on');
+                $('.mySwiper .swiper-slide-active').addClass('on').find("a").css({
+                    backgroundColor: "red",
+                    border: "red"
+                });
+
             },
-            slideChange: function () {
-                $('.swiper-slide').removeClass('on');
-                $('.swiper-slide').eq(this.realIndex).addClass('on');
+            slideChangeTransitionEnd: function () {
+                $(".swiper-slide").removeClass('on');
+                $('.mySwiper .swiper-slide-active').addClass('on');
             }
         },
+        loop: true,
+        centeredSlides: true, //슬라이드 가운데 정렬
+        slidesPerView: "auto", // 한 번에 보여질 슬라이드 개수 
+        spaceBetween: 40,   // 슬라이드 간 간격
+
         pagination: {
             el: ".mySwiper .bar",
             type: "progressbar",
@@ -73,6 +78,18 @@ $(function () {
 
     });
 
+    function btn() {
+        $('.mySwiper .swiper-slide a').css({
+            backgroundColor: "red",
+            border: "1px solid red"
+        });
+    }
 
+    function btnDefault() {
+        $('.mySwiper .swiper-slide a').css({
+            backgroundColor: "#transparent",
+            border: "1px solid #fff"
+        });
+    }
 
 });
