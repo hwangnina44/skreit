@@ -180,4 +180,16 @@ $(function () {
         autoplay: { delay: 3000 },
     });
 
+    
+    var swiper = new Swiper(".mySwiper3", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        autoplay: { delay: 3000 },
+    });
+
 });
