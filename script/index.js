@@ -129,6 +129,17 @@ $(function () {
     //스와이퍼 /////////////////////////////////////////////////////////
     var swiper = new Swiper(".mySwiper", {
 
+
+        loop: true,
+        centeredSlides: true, //슬라이드 가운데 정렬
+        slidesPerView: "auto", // 한 번에 보여질 슬라이드 개수 
+        spaceBetween: 20,   // 슬라이드 간 간격
+
+        pagination: {
+            el: ".mySwiper .bar",
+            type: "progressbar",
+        },
+
         on: {
             init: function () {
                 $('.mySwiper .swiper-slide-active').addClass('on').find("a").css({
@@ -141,16 +152,7 @@ $(function () {
                 $(".swiper-slide").removeClass('on');
                 $('.mySwiper .swiper-slide-active').addClass('on');
             }
-        },
-        loop: true,
-        centeredSlides: true, //슬라이드 가운데 정렬
-        slidesPerView: "auto", // 한 번에 보여질 슬라이드 개수 
-        spaceBetween: 20,   // 슬라이드 간 간격
-
-        pagination: {
-            el: ".mySwiper .bar",
-            type: "progressbar",
-        },
+        }
 
     });
 
@@ -169,24 +171,35 @@ $(function () {
     }
 
     //스와이퍼 성장성/////////////////////////////////////////////////
-    var swiper = new Swiper(".mySwiper2", {
+    var swiper2 = new Swiper(".mySwiper2", {
         loop: true,
         spaceBetween: 20,
         slidesPerView: "auto",
         pagination: {
-            el: ".swiper-pagination",
+            el: ".pagination2",
             type: "progressbar",
         },
         autoplay: { delay: 3000 },
     });
 
-    
-    var swiper = new Swiper(".mySwiper3", {
+
+    var swiper3 = new Swiper(".mySwiper3", {
         loop: true,
         spaceBetween: 20,
         slidesPerView: "auto",
         pagination: {
-            el: ".swiper-pagination",
+            el: ".pagination3",
+            type: "progressbar",
+        },
+        autoplay: { delay: 3000 },
+    });
+
+     var swiper4 = new Swiper(".mySwiper4", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        pagination: {
+            el: ".pagination4",
             type: "progressbar",
         },
         autoplay: { delay: 3000 },
