@@ -177,6 +177,7 @@
         overflow: hidden;
         margin: 80px 0;
     }
+
     /* 슬라이드 엑티브시 효과 추가  */
     .content-des .mySwiper .content-box.on {
         transform: translateY(-20px);
@@ -189,7 +190,8 @@
         display: flex;
         flex-direction: column;
         color: #fff;
-        position: relative; /* 더보가 아이콘 기준 */
+        position: relative;
+        /* 더보가 아이콘 기준 */
         padding: 28px 20px;
         box-sizing: border-box;
     }
@@ -203,12 +205,23 @@
         left: 50%;
         transform: translateX(-50%);
         top: 95%;
-     
+
     }
+
     /* 페이지 네이션 색상 변경 */
     :root {
         --swiper-theme-color: #cccc;
     }
+
+    article.feature .inner {
+        display: flex;
+        flex-direction: column;
+
+    }
+    article.feature .media {
+   
+}
+
 
 }
 
@@ -224,4 +237,3 @@
         transform: translateX(-50%);
     }
 }
-

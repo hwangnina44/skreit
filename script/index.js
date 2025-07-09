@@ -36,6 +36,8 @@ $(function () {
         }
     );
 
+    //resize
+
     //메뉴 텝설정////////////////////////////////////////////////////////////
     $('.menu >li ').hover(
         function () {
@@ -53,7 +55,7 @@ $(function () {
     $('.portfolio .content-right .con1').hover(
         function () {
             $('.bg').css({
-                background: "url(../image/pf_bg1.jpg) center/cover fixed"
+                background: "url(../image/pf_bg1.jpg) center/cover fixed",
             }, 800);
         },
         function () {
@@ -111,7 +113,6 @@ $(function () {
             bg();
         }
     );
-
     function bg() {
         $('.bg').css({
             position: "absolute",
@@ -124,6 +125,7 @@ $(function () {
 
         });
     }
+
 
 
     //스와이퍼 /////////////////////////////////////////////////////////
@@ -171,7 +173,26 @@ $(function () {
     }
 
     //스와이퍼 성장성/////////////////////////////////////////////////
-    var swiper2 = new Swiper(".mySwiper2", {
+    function ensureSlides(containerSelector) {
+        const swiperWrapper = document.querySelector(containerSelector + ' .swiper-wrapper');
+        const slides = swiperWrapper.children;
+        const minSlides = 6;
+
+        if (slides.length < minSlides) {
+            const needed = minSlides - slides.length;
+            for (let i = 0; i < needed; i++) {
+                const clone = slides[i % slides.length].cloneNode(true);
+                swiperWrapper.appendChild(clone);
+            }
+        }
+    }
+
+    // 3개 모두 복제
+    ensureSlides('.myswiper2');
+    ensureSlides('.myswiper3');
+    ensureSlides('.myswiper4');
+
+    var swiper2 = new Swiper(".myswiper2", {
         loop: true,
         spaceBetween: 20,
         slidesPerView: "auto",
@@ -182,8 +203,7 @@ $(function () {
         autoplay: { delay: 3000 },
     });
 
-
-    var swiper3 = new Swiper(".mySwiper3", {
+    var swiper3 = new Swiper(".myswiper3", {
         loop: true,
         spaceBetween: 20,
         slidesPerView: "auto",
@@ -194,7 +214,7 @@ $(function () {
         autoplay: { delay: 3000 },
     });
 
-     var swiper4 = new Swiper(".mySwiper4", {
+    var swiper4 = new Swiper(".myswiper4", {
         loop: true,
         spaceBetween: 20,
         slidesPerView: "auto",
@@ -206,3 +226,4 @@ $(function () {
     });
 
 });
+
