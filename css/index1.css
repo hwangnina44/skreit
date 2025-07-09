@@ -2,10 +2,6 @@
 
 /* *****************reset********************* */
 
-@charset "utf-8";
-
-/* *****************reset********************* */
-
 * {
     margin: 0;
     padding: 0;
@@ -567,14 +563,12 @@ article.feature nav ul li a {
 }
 
 
-/***************************성장성 */
+/***************************성장성 ***************/
 article.feature #growth {
     padding: 120px 0;
     box-sizing: border-box;
     position: relative;
     /* 스와이퍼 기준 */
-    outline: 1px solid red;
-
     overflow: hidden;
 }
 
@@ -630,7 +624,7 @@ article.feature .media {
     display: flex;
 }
 
-.content-wrap .swiper .swiper-slide {
+.content-wrap .myswiper2 .swiper-slide {
     background-color: #fff;
     border-radius: 16px;
     width: 300px;
@@ -690,13 +684,13 @@ article.feature .media {
     margin-top: 3px;
 }
 
-.mySwiper .swiper-slide .bottom-txt {
+.myswiper2 .swiper-slide .bottom-txt {
     font-size: 1.125rem;
     line-height: 1.33;
     color: #666;
 }
 
-.swiper .swiper-slide .bottom-txt .icon-box {
+.myswiper2 .swiper-slide .bottom-txt .icon-box {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -729,22 +723,6 @@ article.feature .media {
 }
 
 
-#profitability .swiper-slide .txt1 .icon-box {
-    background: url(../image/ic_profitability1.png) no-repeat left/ auto 64px;
-}
-
-#profitability .swiper-slide-active .txt1 .icon-box {
-    background: url(../image/ic_profitability1.png) no-repeat 100%/ auto 64px;
-}
-
-#profitability .swiper-slide .txt3 .icon-box {
-    background: url(../image/ic_profitability3.png) no-repeat left/ auto 64px;
-}
-
-#profitability .swiper-slide-active .txt3 .icon-box {
-    background-color: #555;
-    background: url(../image/ic_profitability3.png) no-repeat 100%/ auto 64px;
-}
 
 .growth .content-wrap .pagination2 {
     position: absolute;
@@ -752,6 +730,8 @@ article.feature .media {
     top: 98%;
     width: 100%;
 }
+
+
 
 .content-wrap .swiper .swiper-slide-active {
     transform: translateY(-20px);
@@ -766,45 +746,8 @@ article.feature .media {
     color: #fff;
 }
 
-.feature .inner .content-wrap .star {
-    position: absolute;
-    right: 41%;
-    bottom: 21%;
-    font-size: 1.125rem;
-    color: #888;
-}
 
 
-/* 안전성 */
-#safety {
-    position: relative;
-    padding: 160px 0;
-    width: 100%;
-    background: url(../image/feature_sec2_bg.jpg) no-repeat center/cover;
-}
-
-#safety .content-wrap .swiper {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#safety .swiper-slide .txt2 .icon-box {
-    background: url(../image/ic_stability2.png) no-repeat left/ auto 64px;
-}
-
-#safety .swiper-slide-active .txt2 .icon-box {
-    background: url(../image/ic_stability2.png) no-repeat 100%/ auto 64px;
-}
-
-.content-wrap .pagination3 {
-    position: absolute;
-    left: 0%;
-    top: 98%;
-    width: 100%;
-}
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>> 수익성 */
 #profitability {
