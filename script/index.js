@@ -172,25 +172,7 @@ $(function () {
         });
     }
 
-    //스와이퍼 성장성/////////////////////////////////////////////////
-    function ensureSlides(containerSelector) {
-        const swiperWrapper = document.querySelector(containerSelector + ' .swiper-wrapper');
-        const slides = swiperWrapper.children;
-        const minSlides = 6;
 
-        if (slides.length < minSlides) {
-            const needed = minSlides - slides.length;
-            for (let i = 0; i < needed; i++) {
-                const clone = slides[i % slides.length].cloneNode(true);
-                swiperWrapper.appendChild(clone);
-            }
-        }
-    }
-
-    // 3개 모두 복제
-    ensureSlides('.myswiper2');
-    ensureSlides('.myswiper3');
-    ensureSlides('.myswiper4');
 
     var swiper2 = new Swiper(".myswiper2", {
         loop: true,
