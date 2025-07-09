@@ -1,7 +1,7 @@
 ///index.js
 
 $(function () {
-
+    var scrollTop = $(window).scrollTop();
     //메뉴 active////////////////////////////////////////////////////////////////
 
     function headerActive() {
@@ -17,13 +17,16 @@ $(function () {
 
 
     $(window).scroll(function () {
-
         var scrollTop = $(window).scrollTop();
-
         if (scrollTop > 250) {
             headerActive();
+        }
+        ///////scroll-top////////////////////////////
+        console.log(scrollTop);
+        if (scrollTop > 800) {
+            $(".scroll-top").show();
         } else {
-            headerDefault();
+            $(".scroll-top").hide();
         }
     });
 
@@ -32,7 +35,11 @@ $(function () {
             headerActive();
         },
         function () {
-            headerDefault();
+            if (scrollTop > 250) {
+                headerActive();
+            } else {
+                headerDefault();
+            }
         }
     );
 
@@ -130,31 +137,37 @@ $(function () {
 
     //스와이퍼 /////////////////////////////////////////////////////////
     var swiper = new Swiper(".mySwiper", {
-
-
         loop: true,
         centeredSlides: true, //슬라이드 가운데 정렬
         slidesPerView: "auto", // 한 번에 보여질 슬라이드 개수 
-        spaceBetween: 20,   // 슬라이드 간 간격
 
         pagination: {
-            el: ".mySwiper .bar",
+            el: "swiper-pagination",
             type: "progressbar",
         },
 
         on: {
             init: function () {
-                $('.mySwiper .swiper-slide-active').addClass('on').find("a").css({
-                    backgroundColor: "red",
-                    border: "red"
+                $(".mySwiper .swiper-slide").removeClass("on").find("a").css({
+                    backgroundColor: "transparent",
+                    border: "1px solid #fff",
                 });
-
+                $(".mySwiper .swiper-slide-active").addClass("on").find("a").css({
+                    backgroundColor: "red",
+                    border: "1px solid red",
+                });
             },
-            slideChangeTransitionEnd: function () {
-                $(".swiper-slide").removeClass('on');
-                $('.mySwiper .swiper-slide-active').addClass('on');
-            }
-        }
+            slideChangeTransitionStart: function () {
+                $(".mySwiper .swiper-slide").removeClass("on").find("a").css({
+                    backgroundColor: "transparent",
+                    border: "1px solid #fff",
+                });
+                $(".mySwiper .swiper-slide-active").addClass("on").find("a").css({
+                    backgroundColor: "red",
+                    border: "1px solid red",
+                });
+            },
+        },
 
     });
 
@@ -171,26 +184,6 @@ $(function () {
             border: "1px solid #fff"
         });
     }
-
-    //스와이퍼 성장성/////////////////////////////////////////////////
-    function ensureSlides(containerSelector) {
-        const swiperWrapper = document.querySelector(containerSelector + ' .swiper-wrapper');
-        const slides = swiperWrapper.children;
-        const minSlides = 6;
-
-        if (slides.length < minSlides) {
-            const needed = minSlides - slides.length;
-            for (let i = 0; i < needed; i++) {
-                const clone = slides[i % slides.length].cloneNode(true);
-                swiperWrapper.appendChild(clone);
-            }
-        }
-    }
-
-    // 3개 모두 복제
-    ensureSlides('.myswiper2');
-    ensureSlides('.myswiper3');
-    ensureSlides('.myswiper4');
 
     var swiper2 = new Swiper(".myswiper2", {
         loop: true,
@@ -224,6 +217,5 @@ $(function () {
         },
         autoplay: { delay: 3000 },
     });
-
 });
 

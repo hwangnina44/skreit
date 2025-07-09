@@ -39,7 +39,6 @@ a {
 }
 
 /* ********SK***************************** */
-
 html,
 body {
     width: 100%;
@@ -70,8 +69,6 @@ header {
     top: 0;
     z-index: 99;
 }
-
-
 
 header h1.logo {
     margin-left: 100px;
@@ -516,22 +513,24 @@ article.portfolio-tablet {
 
 article.feature {
     width: 100%;
-    background: url(../image/feature_sec1_bg.jpg) no-repeat center /cover;
-
-    position: relative;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    /* nav에 기준 */
+    position: relative;
+        /* nav에 기준 */
 }
 
 article.feature nav {
     width: 100%;
     border-bottom: 1px solid #666;
 
-    position: relative;
+/* 나중에 fixed로 변경하기 위해서 설정 */
+    position: absolute;
     left: 0;
     top: 0;
 }
 
+/* menu 탭 */
 article.feature nav ul {
     height: 88px;
     display: flex;
@@ -566,27 +565,34 @@ article.feature nav ul li a {
     font-weight: 700;
 }
 
-
-/***************************성장성 */
-article.feature #growth {
-    padding: 120px 0;
-    box-sizing: border-box;
-    position: relative;
-    /* 스와이퍼 기준 */
-    outline: 1px solid red;
-
-    overflow: hidden;
+article.feature .growth {
+    background: url(../image/feature_sec1_bg.jpg) no-repeat center/cover;
 }
 
-article.feature .inner {
+article.feature #safety {
+    background: url(../image/feature_sec2_bg.jpg) no-repeat center/cover;
+}
+
+article.feature #profitability {
+    background: url(../image/feature_sec3_bg.jpg) no-repeat center/cover;
+}
+
+/* 공통 css */
+article.feature>div {
+    padding: 120px 0;
+}
+
+article.feature>div>.inner {
     display: flex;
     flex-direction: row;
+justify-content: space-between;
 
-    width: 100%;
+    
+    padding: 60px 0;
 }
 
-article.feature .media {
-    flex: 1;
+article.feature>div>.inner>.media {
+    width: 50%;
 }
 
 .feature .media .title {
@@ -605,29 +611,31 @@ article.feature .media {
     font-weight: 800;
 }
 
+.feature .media .sub-media {
+    height: 100%;
+}
+
 .feature .media .sub-media iframe {
     width: 464px;
     height: 260px;
 }
 
 /****************스와이퍼 *****************/
-.growth .content-wrap {
-    flex: 1;
-    background-color: #CE0E2D;
-    overflow: hidden;
+
+.feature>div>.inner>.content-wrap {
+    width: 50%;
 }
 
-.growth .content-wrap .swiper {
+.feature>div>.inner>.content-wrap .content-wrap .swiper {
+position: relative;
     width: 100%;
     height: 100%;
-    padding-bottom: 80px;
-
-    overflow: hidden;
+    
 }
 
-.growth .content-wrap .swiper-slide {
-    width: auto;
-    display: flex;
+.content-wrap .swiper .swiper-wrapper {
+    margin-bottom: 60px;
+    
 }
 
 .content-wrap .swiper .swiper-slide {
@@ -640,7 +648,9 @@ article.feature .media {
     margin-top: 80px;
 }
 
+/*  상세내용 */
 .swiper .swiper-slide .content-txt {
+height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -665,7 +675,6 @@ article.feature .media {
     color: #000;
 }
 
-/* 글로벌 인덱스 */
 .swiper-slide .txt4 .top-txt {
     height: 100%;
     display: flex;
@@ -746,13 +755,6 @@ article.feature .media {
     background: url(../image/ic_profitability3.png) no-repeat 100%/ auto 64px;
 }
 
-.growth .content-wrap .pagination2 {
-    position: absolute;
-    left: 0%;
-    top: 98%;
-    width: 100%;
-}
-
 .content-wrap .swiper .swiper-slide-active {
     transform: translateY(-20px);
     background-color: #EE7623;
@@ -766,31 +768,37 @@ article.feature .media {
     color: #fff;
 }
 
-.feature .inner .content-wrap .star {
+.content-wrap .pagination2 {
     position: absolute;
-    right: 41%;
-    bottom: 21%;
+    left: 0%;
+    top: 99%;
+    width: 100%;
+}
+
+.content-wrap .pagination3 {
+    position: absolute;
+    left: 0%;
+    top: 99%;
+    width: 100%;
+}
+
+.content-wrap .pagination4 {
+    position: absolute;
+    left: 0%;
+    top: 99%;
+    width: 100%;
+    }
+
+.feature .inner .content-wrap .star {
+        position: absolute;
+    left: 0%;
+    bottom: 5%;
     font-size: 1.125rem;
     color: #888;
 }
 
 
 /* 안전성 */
-#safety {
-    position: relative;
-    padding: 160px 0;
-    width: 100%;
-    background: url(../image/feature_sec2_bg.jpg) no-repeat center/cover;
-}
-
-#safety .content-wrap .swiper {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 #safety .swiper-slide .txt2 .icon-box {
     background: url(../image/ic_stability2.png) no-repeat left/ auto 64px;
 }
@@ -799,35 +807,6 @@ article.feature .media {
     background: url(../image/ic_stability2.png) no-repeat 100%/ auto 64px;
 }
 
-.content-wrap .pagination3 {
-    position: absolute;
-    left: 0%;
-    top: 98%;
-    width: 100%;
-}
-
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>> 수익성 */
-#profitability {
-    position: relative;
-    width: 100%;
-    padding: 160px 0;
-    background: url(../image/feature_sec3_bg.jpg) no-repeat center/cover;
-}
-
-#profitability .content-wrap .swiper {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.content-wrap .pagination4 {
-    position: absolute;
-    left: 0%;
-    top: 98%;
-    width: 100%;
-}
 /*>>>>>>>>>>>>>>>>>>>>> ir>>>>>>>>>>>>>>>>>>>>>>>>>> */
 article.ir {
     width: 100%;
@@ -956,6 +935,7 @@ article.ir .ir-link .box a {
     color: #fff;
 }
 
+/* footer////////////////////////////////////////////////// */
 footer {
     width: 100%;
     padding: 80px 0;
@@ -1051,6 +1031,49 @@ footer .privacy p~p::after {
     position: absolute;
     left: -10px;
     top: 0px;
+}
+
+/* TOP BTN */
+.scroll-top {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #CE0E2D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    text-align: center;
+
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 99;
+
+    display: none;
+}
+
+.scroll-top a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+
+}
+
+.scroll-top a::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 8px;
+    margin: 3px 0 8px;
+    background: url(../image/gotop_arr.svg) no-repeat center center/contain;
 }
 
 @keyframes bg {
