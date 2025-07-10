@@ -612,7 +612,9 @@ article.feature>div>.inner>.media {
 }
 
 .feature .media .sub-media {
-    height: 100%;
+    width: 100%;
+    padding-bottom: 46.5;
+    height: 0
 }
 
 .feature .media .sub-media iframe {

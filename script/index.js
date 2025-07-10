@@ -21,13 +21,16 @@ $(function () {
         if (scrollTop > 250) {
             headerActive();
         }
-        ///////scroll-top////////////////////////////
-        console.log(scrollTop);
+
+     //
+     //////////scroll-top/////////////////////////////////////////////////
+
         if (scrollTop > 800) {
             $(".scroll-top").show();
         } else {
             $(".scroll-top").hide();
         }
+
     });
 
     $('header').hover(
@@ -37,13 +40,11 @@ $(function () {
         function () {
             if (scrollTop > 250) {
                 headerActive();
-            } else {
-                headerDefault();
             }
         }
     );
 
-    //resize
+
 
     //메뉴 텝설정////////////////////////////////////////////////////////////
     $('.menu >li ').hover(
@@ -133,6 +134,20 @@ $(function () {
         });
     }
 
+    function btn() {
+        $('.mySwiper .swiper-slide a').css({
+            backgroundColor: "red",
+            border: "1px solid red"
+        });
+    }
+
+    function btnDefault() {
+        $('.mySwiper .swiper-slide a').css({
+            backgroundColor: "#transparent",
+            border: "1px solid #fff"
+        });
+    }
+
 
 
     //스와이퍼 /////////////////////////////////////////////////////////
@@ -171,20 +186,6 @@ $(function () {
 
     });
 
-    function btn() {
-        $('.mySwiper .swiper-slide a').css({
-            backgroundColor: "red",
-            border: "1px solid red"
-        });
-    }
-
-    function btnDefault() {
-        $('.mySwiper .swiper-slide a').css({
-            backgroundColor: "#transparent",
-            border: "1px solid #fff"
-        });
-    }
-
     var swiper2 = new Swiper(".myswiper2", {
         loop: true,
         spaceBetween: 20,
@@ -217,5 +218,5 @@ $(function () {
         },
         autoplay: { delay: 3000 },
     });
-});
 
+});
