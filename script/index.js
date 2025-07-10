@@ -22,8 +22,8 @@ $(function () {
             headerActive();
         }
 
-     //
-     //////////scroll-top/////////////////////////////////////////////////
+        //
+        //////////scroll-top/////////////////////////////////////////////////
 
         if (scrollTop > 800) {
             $(".scroll-top").show();
@@ -31,6 +31,16 @@ $(function () {
             $(".scroll-top").hide();
         }
 
+
+        console.log(scrollTop);
+         if (scrollTop > 4310) {
+            $(".feature nav").css({
+                position:"fixed",
+            });
+            $("header").fadeOut();
+        }
+
+        /* 상단바 추가할것.. */
     });
 
     $('header').hover(
@@ -152,12 +162,13 @@ $(function () {
 
     //스와이퍼 /////////////////////////////////////////////////////////
     var swiper = new Swiper(".mySwiper", {
-        loop: true,
+        loop:true,
+        spaceBetween: 40,
         centeredSlides: true, //슬라이드 가운데 정렬
         slidesPerView: "auto", // 한 번에 보여질 슬라이드 개수 
 
         pagination: {
-            el: "swiper-pagination",
+            el: ".swiper-pagination.bar",
             type: "progressbar",
         },
 
