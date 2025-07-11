@@ -2,10 +2,6 @@
 
 /* *****************reset********************* */
 
-@charset "utf-8";
-
-/* *****************reset********************* */
-
 * {
     margin: 0;
     padding: 0;
@@ -34,8 +30,10 @@ a {
 }
 
 .inner {
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* ********SK***************************** */
@@ -45,14 +43,13 @@ body {
     height: 100%;
     font-family: 'Pretendard';
     font-weight: 400;
-    overflow-x: hidden;
+    box-sizing: border-box;
 
     /* 스와이퍼 */
     position: relative;
 }
 
 body {
-    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -69,6 +66,7 @@ header {
     left: 0;
     top: 0;
     z-index: 99;
+    box-sizing: border-box;
 }
 
 header h1.logo {
@@ -90,6 +88,7 @@ div.wrap {
     width: 100%;
     height: 100px;
     background-color: #fff;
+    box-sizing: border-box;
 
     position: absolute;
     left: 0;
@@ -104,12 +103,13 @@ header.active {
 /* ****menu******************************************************* */
 header nav {}
 
-header nav ul.menu {
+header nav .menu {
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 nav .menu>li {
@@ -517,6 +517,7 @@ article.feature {
     justify-content: center;
     overflow: hidden;
 
+
     position: relative;
     /* nav에 기준 */
 }
@@ -652,7 +653,7 @@ article.feature>div>.inner>.media {
 }
 
 .swiper .swiper-wrapper:hover {
-    cursor: url(../image/ic_drag.png),auto;
+    cursor: url(../image/ic_drag.png), auto;
 }
 
 
@@ -968,7 +969,6 @@ footer .inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
 }
 
 footer .footer-logo {
