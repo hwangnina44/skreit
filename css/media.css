@@ -117,10 +117,20 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 8px;
     }
 
     .skreit .des-box .des .img-box {
         height: 48px;
+    }
+
+    article.skreit .des-box .des .des-left {
+        width: 340px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
     }
 
     .skreit .des-box .des .des-left p {
@@ -541,7 +551,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 18px;
+        gap: 8px;
     }
 
     footer .footer-info ul li~li::after {
@@ -600,6 +610,23 @@
         top: 30%;
         transform: translateX(-50%);
     }
+
+    article.skreit .title .title-des {
+        width: 100%;
+        padding: 0 28px;
+        box-sizing: border-box;
+
+        margin-left: 0;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    .skreit .des-box .des .img-box {
+        height: 42px;
+    }
+
 }
 
 @media all and (max-width: 360px) {
@@ -623,10 +650,19 @@
         height: 68px;
         width: 68px;
         background: #CE0E2D url(../image/ic_menu.svg) center center no-repeat;
-        
+
     }
 
+    article.skreit .title p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
 
+    footer .footer-info ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
 
-
+    }
 }
